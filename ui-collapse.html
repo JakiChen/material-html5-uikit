@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport">
-	<title>Material</title>
+	<title>Collapsible Regions - Material</title>
 
 	<!-- css -->
 	<link href="css/base.min.css" rel="stylesheet">
@@ -13,11 +13,10 @@
 	<!-- ... -->
 
 	<!-- ie -->
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.js" type="text/javascript"></script>
-        <script src="js/respond.js" type="text/javascript"></script>
-    <![endif]-->
-    
+		<!--[if lt IE 9]>
+			<script src="/js/html5shiv.js" type="text/javascript"></script>
+			<script src="/js/respond.js" type="text/javascript"></script>
+		<![endif]-->
 </head>
 <body>
 	<header class="header">
@@ -60,7 +59,7 @@
 						<li>
 							<a href="ui-card.html"><span class="icon icon-apps"></span>Cards</a>
 						</li>
-						<li>
+						<li class="active">
 							<a href="ui-collapse.html"><span class="icon icon-fullscreen-exit"></span>Collpasible Regions</a>
 						</li>
 						<li>
@@ -179,39 +178,16 @@
 	<div class="content">
 		<div class="content-heading">
 			<div class="container">
-				<h1 class="heading">Material</h1>
+				<h1 class="heading">Collapsible Regions</h1>
 			</div>
 		</div>
 		<div class="content-inner">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-md-10">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in massa vitae nisl hendrerit sollicitudin at vel purus. Quisque leo est, posuere a dignissim id, posuere non quam. Nulla dapibus quis leo eu pulvinar. Phasellus ultrices condimentum dolor, non condimentum nibh. Curabitur tempor sollicitudin eros vitae posuere.</p>
-						<h3 class="content-sub-heading">Components</h3>
-						<ul>
-							<li><a href="ui-card.html">Cards</a></li>
-							<li><a href="ui-collapse.html">Collapsible Regions</a></li>
-							<li><a href="ui-modal.html">Modal &amp; Toasts</a></li>
-							<li><a href="ui-tab.html">Tabs</a></li>
-							<li><a href="ui-tile.html">Tiles</a></li>
-						</ul>
-						<h3 class="content-sub-heading">Elements</h3>
-						<ul>
-							<li><a href="ui-button.html">Buttons</a></li>
-							<li><a href="ui-form.html">Form Elements</a></li>
-							<li><a href="ui-form-adv.html">Form Elements - Materialised Elements</a></li>
-							<li><a href="ui-icon.html">Icons</a></li>
-						</ul>
-						<h3 class="content-sub-heading">Examples</h3>
-						<ul>
-							<li><a href="page-404.html">404 Page</a></li>
-							<li><a href="page-500.html">500 Page</a></li>
-							<li><a href="page-affix.html">Fixed Left/Right Hand Side Column</a></li>
-							<li><a href="page-affix-full.html">Full-Width Page <small>(with fixed LHC/RHC)</small></a></li>
-							<li><a href="page-login.html">Login Page</a></li>
-							<li><a href="page-palette.html">Page Palettes</a></li>
-						</ul>
-					</div>
+				<p><a class="btn collapsed" data-toggle="collapse" href="#collapsible-region"><span class="collapsed-hide">Collapse</span><span class="collapsed-show">Expand</span></a></p>
+				<div class="collapsible-region collapse" id="collapsible-region">
+					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
 				</div>
 			</div>
 		</div>

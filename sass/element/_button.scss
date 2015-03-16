@@ -1,0 +1,296 @@
+.btn {
+	background-color: $white;
+	background-image: none;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	color: $black-text;
+	cursor: pointer;
+	display: inline-block;
+	font-size: $font-size;
+	font-weight: 400;
+	line-height: $line-height;
+	margin-bottom: 0;
+	max-width: 100%;
+	padding: (($btn-height - $line-height - 2) / 2) $grid-gutter;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	white-space: nowrap;
+	@include box-shadow(0 1px 5px rgba(0, 0, 0, 0.15), 0 1px 5px rgba(0, 0, 0, 0.15));
+	@include transition(all 0.45s $timing, background-color 0.3s linear 0s);
+	@include user-select(none);
+	&:active,
+	&:focus,
+	&:hover {
+		color: $black-text;
+		outline: 0;
+		text-decoration: none;
+		@include box-shadow(0 5px 10px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.15));
+	}
+	&:active {
+		background-color: $white-bg;
+		@include transition(all 0.45s $timing, background-color 0s linear 0.45s);
+	}
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: not-allowed;
+		@include opacity(0.5);
+	}
+	&.btn-active {
+		background-image: -webkit-radial-gradient(circle, $white-bg 10%, $white 11%);
+		background-image:         radial-gradient(circle, $white-bg 10%, $white 11%);
+		background-size: 900% 900%;
+	}
+}
+
+.btn-block {
+	display: block;
+	white-space: normal;
+	width: 100%;
+}
+
+.btn-sm {
+	padding: 0 ($grid-gutter / 2);
+}
+
+// colours
+	.btn-alt {
+		background-color: $brand-color;
+		color: $white;
+		&:active,
+		&:focus,
+		&:hover {
+			color: $white;
+		}
+		&:active {
+			background-color: $brand-color-light-m;
+		}
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $brand-color;
+		}
+		&.btn-active {
+			background-image: -webkit-radial-gradient(circle, $brand-color-light-m 10%, $brand-color 11%);
+			background-image:         radial-gradient(circle, $brand-color-light-m 10%, $brand-color 11%);
+		}
+	}
+
+	.btn-blue {
+		background-color: $palette-blue;
+		color: $white;
+		&:active,
+		&:focus,
+		&:hover {
+			color: $white;
+		}
+		&:active {
+			background-color: $palette-blue-light-m;
+		}
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $palette-blue;
+		}
+		&.btn-active {
+			background-image: -webkit-radial-gradient(circle, $palette-blue-light-m 10%, $palette-blue 11%);
+			background-image:         radial-gradient(circle, $palette-blue-light-m 10%, $palette-blue 11%);
+		}
+	}
+
+	.btn-green {
+		background-color: $palette-green;
+		color: $white;
+		&:active,
+		&:focus,
+		&:hover {
+			color: $white;
+		}
+		&:active {
+			background-color: $palette-green-light-m;
+		}
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $palette-green;
+		}
+		&.btn-active {
+			background-image: -webkit-radial-gradient(circle, $palette-green-light-m 10%, $palette-green 11%);
+			background-image:         radial-gradient(circle, $palette-green-light-m 10%, $palette-green 11%);
+		}
+	}
+
+	.btn-purple {
+		background-color: $palette-purple;
+		color: $white;
+		&:active,
+		&:focus,
+		&:hover {
+			color: $white;
+		}
+		&:active {
+			background-color: $palette-purple-light-m;
+		}
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $palette-purple;
+		}
+		&.btn-active {
+			background-image: -webkit-radial-gradient(circle, $palette-purple-light-m 10%, $palette-purple 11%);
+			background-image:         radial-gradient(circle, $palette-purple-light-m 10%, $palette-purple 11%);
+		}
+	}
+
+	.btn-red {
+		background-color: $palette-red;
+		color: $white;
+		&:active,
+		&:focus,
+		&:hover {
+			color: $white;
+		}
+		&:active {
+			background-color: $palette-red-light-m;
+		}
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $palette-red;
+		}
+		&.btn-active {
+			background-image: -webkit-radial-gradient(circle, $palette-red-light-m 10%, $palette-red 11%);
+			background-image:         radial-gradient(circle, $palette-red-light-m 10%, $palette-red 11%);
+		}
+	}
+
+	.btn-yellow {
+		background-color: $palette-yellow;
+		color: $white;
+		&:active,
+		&:focus,
+		&:hover {
+			color: $white;
+		}
+		&:active {
+			background-color: $palette-yellow-light-m;
+		}
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $palette-yellow;
+		}
+		&.btn-active {
+			background-image: -webkit-radial-gradient(circle, $palette-yellow-light-m 10%, $palette-yellow 11%);
+			background-image:         radial-gradient(circle, $palette-yellow-light-m 10%, $palette-yellow 11%);
+		}
+	}
+
+// flat
+	.btn-flat {
+		background-color: transparent;
+		@include box-shadow(none);
+		&[disabled],
+		fieldset[disabled] & {
+			color: $black-text;
+		}
+		&.btn-alt {
+			color: $brand-color;
+			&:active {
+				background-color: $brand-color-light;
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				color: $brand-color;
+			}
+			&.btn-active {
+				background-image: -webkit-radial-gradient(circle, $brand-color-light 10%, $white 11%);
+				background-image:         radial-gradient(circle, $brand-color-light 10%, $white 11%);
+			}
+		}
+		&.btn-blue {
+			color: $palette-blue;
+			&:active {
+				background-color: $palette-blue-light;
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				color: $palette-blue;
+			}
+			&.btn-active {
+				background-image: -webkit-radial-gradient(circle, $palette-blue-light 10%, $white 11%);
+				background-image:         radial-gradient(circle, $palette-blue-light 10%, $white 11%);
+			}
+		}
+		&.btn-green {
+			color: $palette-green;
+			&:active {
+				background-color: $palette-green-light;
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				color: $palette-green;
+			}
+			&.btn-active {
+				background-image: -webkit-radial-gradient(circle, $palette-green-light 10%, $white 11%);
+				background-image:         radial-gradient(circle, $palette-green-light 10%, $white 11%);
+			}
+		}
+		&.btn-purple {
+			color: $palette-purple;
+			&:active {
+				background-color: $palette-purple-light;
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				color: $palette-purple;
+			}
+			&.btn-active {
+				background-image: -webkit-radial-gradient(circle, $palette-purple-light 10%, $white 11%);
+				background-image:         radial-gradient(circle, $palette-purple-light 10%, $white 11%);
+			}
+		}
+		&.btn-red {
+			color: $palette-red;
+			&:active {
+				background-color: $palette-red-light;
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				color: $palette-red;
+			}
+			&.btn-active {
+				background-image: -webkit-radial-gradient(circle, $palette-red-light 10%, $white 11%);
+				background-image:         radial-gradient(circle, $palette-red-light 10%, $white 11%);
+			}
+		}
+		&.btn-yellow {
+			color: $palette-yellow;
+			&:active {
+				background-color: $palette-yellow-light;
+			}
+			&[disabled],
+			fieldset[disabled] & {
+				color: $palette-yellow;
+			}
+			&.btn-active {
+				background-image: -webkit-radial-gradient(circle, $palette-yellow-light 10%, $white 11%);
+				background-image:         radial-gradient(circle, $palette-yellow-light 10%, $white 11%);
+			}
+		}
+	}
+
+// size
+	.btn-sm {
+		font-size: $font-size-h6;
+		line-height: ($line-height - 2);
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+// text
+	.btn-text {
+		color: $black-text;
+		display: inline-block;
+		font-size: $font-size;
+		font-weight: 400;
+		line-height: $line-height;
+		padding: (($btn-height - $line-height) / 2) 0;
+	}

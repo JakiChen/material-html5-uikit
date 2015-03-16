@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport">
-	<title>Material</title>
+	<title>Modals &amp; Toasts - Material</title>
 
 	<!-- css -->
 	<link href="css/base.min.css" rel="stylesheet">
@@ -13,11 +13,10 @@
 	<!-- ... -->
 
 	<!-- ie -->
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.js" type="text/javascript"></script>
-        <script src="js/respond.js" type="text/javascript"></script>
-    <![endif]-->
-    
+		<!--[if lt IE 9]>
+			<script src="/js/html5shiv.js" type="text/javascript"></script>
+			<script src="/js/respond.js" type="text/javascript"></script>
+		<![endif]-->
 </head>
 <body>
 	<header class="header">
@@ -63,7 +62,7 @@
 						<li>
 							<a href="ui-collapse.html"><span class="icon icon-fullscreen-exit"></span>Collpasible Regions</a>
 						</li>
-						<li>
+						<li class="active">
 							<a href="ui-modal.html"><span class="icon icon-flip-to-front"></span>Modals &amp; Toasts</a>
 						</li>
 						<li>
@@ -179,40 +178,15 @@
 	<div class="content">
 		<div class="content-heading">
 			<div class="container">
-				<h1 class="heading">Material</h1>
+				<h1 class="heading">Modals &amp; Toasts</h1>
 			</div>
 		</div>
 		<div class="content-inner">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-md-10">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in massa vitae nisl hendrerit sollicitudin at vel purus. Quisque leo est, posuere a dignissim id, posuere non quam. Nulla dapibus quis leo eu pulvinar. Phasellus ultrices condimentum dolor, non condimentum nibh. Curabitur tempor sollicitudin eros vitae posuere.</p>
-						<h3 class="content-sub-heading">Components</h3>
-						<ul>
-							<li><a href="ui-card.html">Cards</a></li>
-							<li><a href="ui-collapse.html">Collapsible Regions</a></li>
-							<li><a href="ui-modal.html">Modal &amp; Toasts</a></li>
-							<li><a href="ui-tab.html">Tabs</a></li>
-							<li><a href="ui-tile.html">Tiles</a></li>
-						</ul>
-						<h3 class="content-sub-heading">Elements</h3>
-						<ul>
-							<li><a href="ui-button.html">Buttons</a></li>
-							<li><a href="ui-form.html">Form Elements</a></li>
-							<li><a href="ui-form-adv.html">Form Elements - Materialised Elements</a></li>
-							<li><a href="ui-icon.html">Icons</a></li>
-						</ul>
-						<h3 class="content-sub-heading">Examples</h3>
-						<ul>
-							<li><a href="page-404.html">404 Page</a></li>
-							<li><a href="page-500.html">500 Page</a></li>
-							<li><a href="page-affix.html">Fixed Left/Right Hand Side Column</a></li>
-							<li><a href="page-affix-full.html">Full-Width Page <small>(with fixed LHC/RHC)</small></a></li>
-							<li><a href="page-login.html">Login Page</a></li>
-							<li><a href="page-palette.html">Page Palettes</a></li>
-						</ul>
-					</div>
-				</div>
+				<p class="margin-half-top"><a class="btn" data-toggle="modal" href="#modal">Toggle Modal</a></p>
+				<p><a class="btn" data-toggle="modal" href="#modal-big">Full-width Modal</a></p>
+				<p><a class="btn" data-toggle="toast" href="#normal-toast">Toggle Toast</a></p>
+				<p class="margin-half-bottom"><a class="btn" data-toggle="toast" href="#action-toast">Toast with Action Button</a></p>
 			</div>
 		</div>
 	</div>
@@ -229,6 +203,65 @@
 				<a class="fbtn fbtn-green" href="javascript:void(0)"><span class="fbtn-text">Image</span><span class="icon icon-image"></span></a>
 				<a class="fbtn fbtn-yellow" href="javascript:void(0)"><span class="fbtn-text">Video</span><span class="icon icon-videocam"></span></a>
 			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" class="modal fade" id="modal" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					<h3 class="modal-title">Modal Title</h3>
+				</div>
+				<div class="modal-inner">
+					<h4>Overflowing text to show scroll behaviour</h4>
+					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" class="modal fade" id="modal-big" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					<h3 class="modal-title">Modal Title</h3>
+				</div>
+				<div class="modal-inner">
+					<h4>Overflowing text to show scroll behaviour</h4>
+					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="toast">
+		<div class="toast-inner" id="normal-toast">
+			<span class="toast-text">Simple toast with some text</span>
+		</div>
+		<div class="toast-inner" id="action-toast">
+			<a class="toast-action" data-dismiss="toast">Action</a>
+			<span class="toast-text">This toast contains one action for you to click</span>
 		</div>
 	</div>
 
